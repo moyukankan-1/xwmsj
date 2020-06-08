@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper indicator-dots autoplay circular class="uswiper-top" indicator-color="#fff" indicator-active-color="red">
+    <block wx:for="{{list}}" wx:key="id">
+      <swiper-item class="top-swiper">
+        <image src="https://www.jnxsdwmsj.com{{item.picaddress}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <swiper class="uswiper-con" indicator-dots indicator-color="#666" indicator-active-color="red">
+    <swiper-item class="con-swiper">
+      <view wx:for="{{tabTwo}}" wx:key="id" bindtap="_tabTap1" id="{{index}}">
+        <image src="{{item.src}}"></image>
+        <text>{{item.text}}</text>
+      </view>
+    </swiper-item>
+    <swiper-item class="con-swiper">
+      <view wx:for="{{tabItem}}" wx:key="id" bindtap="_tabTap2" id="{{index}}">
+        <image src="{{item.src}}"></image>
+        <text>{{item.text}}</text>
+      </view> 
+    </swiper-item>
+  </swiper>
+  <articleitem id="cc" items="{{articles}}" lists="{{articleItems}}" typeitem="{{type}}" scrollY="{{scrollY}}"/>
+</view>

@@ -1,0 +1,17 @@
+/* pages/applyArea/applyArea.wxss */
+.apply-area {
+  display: flex;
+}
+.apply-area > view {
+  width: 45%;
+}
+.location,.locationitem {
+  padding: 30rpx;
+  border-bottom: 2rpx solid rgb(230,230,230);
+}
+.locationitem {
+  margin-left: 10%;
+}
+.active {
+  color: red;
+}

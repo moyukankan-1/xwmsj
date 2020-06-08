@@ -1,0 +1,21 @@
+<!--components/pop/pop.wxml-->
+<view class="pop" hidden="{{!showPop}}">
+  <view class="pop-mask"></view>
+  <view class="pop-content">
+    <view class="title">{{title}}</view>
+    <checkbox-group bindchange="_change" style="display: {{type == 1?'block':'none'}}">
+      <scroll-view scroll-y style="height: 600rpx;">
+        <checkbox wx:for="{{popList}}" wx:key="id" value="{{item.name}}">{{item.name}}</checkbox>
+      </scroll-view>
+    </checkbox-group>
+    <checkbox-group bindchange="_change" style="display: {{type == 2?'block':'none'}}">
+      <scroll-view scroll-y style="height: 600rpx;">
+        <checkbox wx:for="{{skillList}}" wx:key="id" value="{{item.name}}">{{item.name}}</checkbox>
+      </scroll-view>
+    </checkbox-group> 
+    <view class="btn-row">
+      <view class="cancel" bindtap='_cancel'>取消</view>
+      <view class="confirm" bindtap="_confirm">确定</view>
+    </view>
+  </view> 
+</view> 

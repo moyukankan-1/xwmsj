@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "alert": "/components/alert/alert",
+    "pop": "/components/pop/pop"
+  },
+  "navigationBarBackgroundColor": "#DC143C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "个人信息"
+}

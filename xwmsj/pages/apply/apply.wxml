@@ -1,0 +1,70 @@
+<view class="apply">
+  <form bindsubmit="_submit">
+    <view>
+      <label>姓名:</label>
+      <input value="{{name}}"></input>
+    </view>
+    <view>
+      <label>性别:</label>
+      <radio-group bindchange="_gender">
+        <radio color="red" value="男">男</radio>
+        <radio color="red" value="女">女</radio>
+      </radio-group>
+    </view>
+    <view>
+      <label>出生日期:</label>
+      <picker mode="date" value="{{date}}" bindchange="_bindDateChange">请选择日期<text>{{date}}</text></picker>
+    </view>
+    <view>
+      <label>民族:</label>
+      <picker mode="selector" range="{{nation}}" bindchange="_bindNationChange">请选择民族<text>{{nation[nationitem]}}</text></picker>
+    </view>
+    <view>
+      <label>职业:</label>
+      <picker mode="selector" range="{{occupation}}" bindchange="_bindOccupationChange">请选择职业<text>{{occupation[occupationitem]}}</text></picker>
+    </view>
+    <view>
+      <label>邮箱:</label>
+      <input placeholder="请输入邮箱" bindinput="_email"></input>
+    </view>
+    <view>
+      <label>政治面貌:</label>
+      <picker mode="selector" range="{{politics}}" bindchange="_bindPoliticsChange">请选择政治面貌<text>{{politics[politicsitem]}}</text></picker>
+    </view>
+    <view>
+      <label>文化程度:</label>
+      <picker mode="selector" range="{{culture}}" bindchange="_bindCultureChange">请选择文化程度<text>{{culture[cultureitem]}}</text></picker>
+    </view>
+    <view>
+      <label>单位名称:</label>
+      <input placeholder="请输入单位名称" bindinput="_units"></input>
+    </view>
+    <view>
+      <label>所在地区:</label>
+      <input placeholder="请选择所在地区" bindtap="_bindApplyareaChange" value="{{leftName}}{{rightName}}"></input>
+    </view>
+    <view>
+      <label>详细地址:</label>
+      <input placeholder="请输入详细地址" bindinput="_madress"></input>
+    </view>
+    <view>
+      <label>服务类型:</label>
+      <input placeholder="请选择服务类型" bindtap="_modal" value="{{pop}}"></input>
+    </view>
+    <view>
+      <label>个人技能:</label>
+      <input placeholder="请选择个人技能" bindtap="_skill" value="{{skill}}"></input>
+    </view>
+    <view>
+      <label>服务时间:</label>
+      <input placeholder="请输入服务时间(例如:周末)" bindinput="_time"></input>
+    </view>
+    <view>
+      <label>自我介绍:</label>
+      <input placeholder="请输入自我介绍" bindinput="_intro"></input>
+    </view>
+    <button style="width: 100%; background: red; color: #fff;" form-type="submit">提交</button>
+  </form>
+  <pop id="pop" title="{{title}}" type="{{type}}" bind:cancel="_handleCancel" bind:confirm="_handleConfirm"/>
+</view>
+ 

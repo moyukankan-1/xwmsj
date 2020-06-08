@@ -1,0 +1,25 @@
+<!--pages/myTeam/myTeam.wxml-->
+<view class="my-team">
+  <view wx:for="{{list}}" wx:key="id">
+    <image src="https://www.jnxsdwmsj.com{{item.logo}}"></image>
+    <view>
+      <text>{{item.name}}</text>
+      <text>所在地区: {{item.area}}</text>
+      <text>服务时长: {{item.serviceTime}}小时</text>
+    </view>
+    <text style="background: {{item.isJoin ==2?'orange':''}}{{item.isJoin == 3?'green':''}};color: {{item.isJoin ==2?'#fff':''}}{{item.isJoin == 3?'#fff':''}}">{{m1.jr(item.isJoin)}}</text>
+  </view>
+</view>
+
+<wxs module="m1">
+  function jr(s) {
+    if(s == 1) {
+      return "未加入"
+    }else if(s == 2) {
+      return "申请中"
+    }else if(s == 3) {
+      return "已加入"
+    }
+  }
+  module.exports.jr = jr
+</wxs>

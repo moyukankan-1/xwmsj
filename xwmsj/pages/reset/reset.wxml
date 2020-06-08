@@ -1,0 +1,23 @@
+<!--pages/reset/reset.wxml-->
+<view class="reset">
+  <form bindsubmit="_submit">
+    <view>
+      <label>手机号:</label> 
+      <input placeholder="请输入手机号" bindinput="_mobile"></input>
+    </view>
+    <view>
+      <label>验证码:</label>
+      <input placeholder="请输入验证码" bindinput="_verification"></input>
+      <text bindtap="_dedao">{{verState}}</text>
+    </view>
+    <view>
+      <label>密码:</label>
+      <input placeholder="请输入密码" bindinput="_password" password></input>
+    </view>
+    <view>
+      <label>确认密码:</label>
+      <input placeholder="请再次输入密码" bindinput="_conPassword" password></input>
+    </view>
+    <button form-type="submit" class="btn" style="width: 100%;">确定</button>
+  </form>
+</view>

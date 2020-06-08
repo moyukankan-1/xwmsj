@@ -1,0 +1,250 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.4",
+	"appid": "wxc59c1313c3047465",
+	"projectname": "xwmsj",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "enroll",
+					"pathName": "pages/enroll/enroll",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "counties",
+					"pathName": "pages/counties/counties",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "countiesItem",
+					"pathName": "pages/countiesItem/countiesItem",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "active",
+					"pathName": "pages/active/active",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "screenDetails",
+					"pathName": "pages/screenDetails/screenDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wish",
+					"pathName": "pages/wish/wish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "rankList",
+					"pathName": "pages/rankList/rankList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "komsta",
+					"pathName": "pages/komsta/komsta",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "apply",
+					"pathName": "pages/apply/apply",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "/applyArea",
+					"pathName": "pages/applyArea/applyArea",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "modify",
+					"pathName": "pages/modify/modify",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "updataPas",
+					"pathName": "pages/updataPas/updataPas",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "reset",
+					"pathName": "pages/reset/reset",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "news",
+					"pathName": "pages/news/news",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "Integral",
+					"pathName": "pages/Integral/Integral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "practice",
+					"pathName": "pages/practice/practice",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "/mapVr",
+					"pathName": "pages/mapVr/mapVr",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "feedback",
+					"pathName": "pages/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "/mineOrder",
+					"pathName": "pages/mineOrder/mineOrder",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "myTeam",
+					"pathName": "pages/myTeam/myTeam",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "mineWish",
+					"pathName": "pages/mineWish/mineWish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "releaseWish",
+					"pathName": "pages/releaseWish/releaseWish",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "message",
+					"pathName": "pages/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "study",
+					"pathName": "pages/study/study",
+					"scene": null
+				}
+			]
+		}
+	}
+}

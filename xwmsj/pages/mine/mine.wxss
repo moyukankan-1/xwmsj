@@ -1,0 +1,69 @@
+/* pages/mine/mine.wxss */
+.mine {
+  background: rgb(230,230,230);
+}
+.mine-image {
+  position: relative;
+  background: #DC143C;
+  height: 400rpx;
+  margin-bottom: 20rpx;
+}
+.mine-image image {
+  position: absolute;
+  left: 50%;
+  width: 140rpx;
+  height: 140rpx;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.mine-image > text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 160rpx;
+  color: #fff;
+}
+.mine-image view {
+  position: absolute;
+  left: 50%;
+  top: 220rpx;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 26rpx;
+  width: 500rpx;
+  text-align: center;
+}
+.mine-image view text:first-child {
+  margin-right: 40rpx;
+}
+.mine-content {
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.mine-content view {
+  position: relative;
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 2rpx solid rgb(230,230,230);
+  font-size: 28rpx;
+}
+.mine-content view image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 30rpx;
+  margin-top: 5rpx;
+}
+.mine-content view text:last-child {
+  position: absolute;
+  right: 20rpx;
+}
+.mine-content view .unin {
+  position: absolute;
+  right: 60rpx;
+  background: red;
+  padding: 0 5rpx;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24rpx;
+}
+

@@ -1,0 +1,29 @@
+<!--pages/rankList/rankList.wxml-->
+<view class="rank-list">
+  <view class="rank-top">
+    <view wx:for="{{tops}}" wx:key="id">
+      <text bindtap="_tap" class="{{index == idx?'active':''}}" id="{{index}}">{{item.name}}</text>
+    </view>
+  </view>
+  <scroll-view scroll-y style="height: 100%;" bindscrolltolower="_lower">
+    <view class="rank-content" wx:for="{{list}}" wx:key="id" hidden="{{idx == 1}}">
+        <text class="paiming">{{item.ranking}}</text>
+        <image src="https://www.jnxsdwmsj.com{{item.headImage}}"></image>
+        <text class="a">{{item.name}}</text>
+        <text class="b">服务时长: {{item.serviceTime}}小时</text>
+        <text class="c"></text>
+    </view>
+    <view class="rank-content" wx:for="{{teamList}}" wx:key="id" hidden="{{idx == 0}}" bindtap="_mes" id="{{index}}">
+        <text class="paiming">{{item.ranking}}</text>
+        <image src="https://www.jnxsdwmsj.com{{item.logo}}"></image>
+        <text class="a">{{item.name}}</text>
+        <text class="d">活动次数:{{item.activityNum}}</text>
+        <text class="b {{teamList.length>0?'bb':''}}">服务时长: {{item.serviceTime}}小时</text>
+    </view>
+    <view class="loading">
+      <image src="/assets/drawable/1.jpg" hidden="{{hiddenImg}}" />
+      <text>{{load}}</text>  
+    </view>
+  </scroll-view>
+</view>
+

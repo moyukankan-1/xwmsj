@@ -1,0 +1,4 @@
+<!--pages/message/message.wxml-->
+<view class="message">
+  <articleitem id="cc" items="{{articles}}" lists="{{articleItems}}" typeitem="{{type}}" scrollY="{{scrollY}}"/>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/newsDetails/newsDetails.wxml-->
+<view class="news-details">
+  <text>{{details.title}}</text>
+  <text>{{details.sender}}</text>
+  <text>{{m1.formats(details.sendTime)}}</text>
+  <text>{{details.content}}</text>
+</view>
+
+<wxs module="m1">
+  function formats(s) {
+    var d = getDate(s*1000)
+    return [d.getFullYear(),d.getMonth()+1,d.getDate()].join('-') + ' ' + [d.getHours(),d.getMinutes(),d.getSeconds()].join(':')
+  }
+  module.exports.formats = formats
+</wxs>

@@ -1,0 +1,18 @@
+<!--pages/updataPas/updataPas.wxml-->
+<view class="updata-pas">
+  <form bindsubmit="_submit">
+    <view>
+      <label>原密码:</label> 
+      <input placeholder="请输入原密码" bindinput="_oldInput" password></input>
+    </view>
+    <view>
+      <label>新密码:</label>
+      <input placeholder="请输入新密码" bindinput="_newInput" password></input>
+    </view>
+    <view>
+      <label>确认密码:</label>
+      <input placeholder="请再次输入密码" bindinput="_conInput" password></input>
+    </view>
+    <button form-type="submit" class="btn" style="width: 100%;">确定</button>
+  </form>
+</view>

@@ -1,0 +1,20 @@
+/* pages/counties/counties.wxss */
+.counties {
+  display: flex;
+  padding: 20rpx;
+  background: rgb(240,240,240);
+  flex-wrap: wrap;
+}
+.counties view {
+  background: #fff;
+  width: 340rpx;
+  height: 150rpx;
+  text-align: center;
+  line-height: 150rpx;
+  margin-right: 30rpx;
+  border-radius: 15rpx;
+  margin-bottom: 30rpx;
+}
+.counties view:nth-child(even) {
+  margin-right: 0
+}

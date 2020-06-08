@@ -1,0 +1,9 @@
+<!--pages/applyArea/applyArea.wxml-->
+<view class="apply-area">
+  <view>
+    <view wx:for="{{list}}" wx:key="id" id="{{index}}" class="location {{index == idx?'active':''}}" bindtap="_leftloc">{{item.locationName}}</view>
+  </view>
+  <view>
+    <view wx:for="{{twoList}}" wx:key="id" id="{{index}}" class="locationitem {{index == itemIdx?'active':''}}" bindtap="_rightloc">{{item.locationName}}</view>
+  </view>
+</view>

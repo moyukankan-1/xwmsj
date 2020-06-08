@@ -1,0 +1,8 @@
+<!--components/articleList/articleList.wxml-->
+<view class="article-list {{scrollY?'move':''}}">
+  <block wx:for="{{items}}" wx:key="id">
+    <view id="{{index}}" class="{{currentIndex == index?'active':''}}" bindtap="_handlerTap">
+      <text>{{item.columnName}}</text>
+    </view>
+  </block>
+</view>

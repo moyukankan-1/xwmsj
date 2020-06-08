@@ -1,0 +1,17 @@
+<!--pages/articleDetails/articleDetails.wxml-->
+<view class="article-details">
+  <view wx:for="{{list}}" wx:key="id">
+    <text class="text1">{{item.title}}</text>
+    <text class="text2">{{m1.format(item.date)}}</text>
+    <text class="text3">{{item.sender}}</text>
+    <rich-text nodes="{{item.content}}"></rich-text>
+  </view>
+</view>
+
+<wxs module="m1">
+  function format(ts) {
+    var d = getDate(ts*1000)
+    return [d.getFullYear(), d.getMonth()+1, d.getDate()].join('-')
+  }
+  module.exports.format = format
+</wxs>

@@ -1,0 +1,41 @@
+<!--pages/mineOrder/mineOrder.wxml-->
+<view class="mine-order">
+  <view wx:for="{{list}}" wx:key="id">
+    <text>{{item.title}} <text>{{m1.pp(item.brand)}}</text></text>
+    <text>点单时间: {{m1.formats(item.addtime)}}</text>
+    <text style="background: {{item.status ==1?'orange':''}}{{item.status == 3?'red':''}};color: {{item.status ==1?'#fff':''}}{{item.status == 3?'#fff':''}};">{{m1.audit(item.status)}}</text>
+  </view>
+  <view class="integral-bottom" style="display: {{none}}; border-bottom: none;">
+    <image src="/assets/drawable/ic_no_data.png" />
+    <text>暂无数据</text>
+  </view>
+</view>
+
+<wxs module="m1">
+  function pp(s) {
+    if(s == 1) {
+      return "品牌"
+    }else {
+      return 
+    }
+  }
+  module.exports.pp = pp
+
+  function formats(s) {
+    var d = getDate(s*1000)
+    return [d.getFullYear(),d.getMonth()+1,d.getDate()].join('-') + ' ' + [d.getHours(),d.getMinutes()].join(':')
+  }
+  module.exports.formats = formats
+
+  function audit(s) {
+    if(s == 1) {
+      return "待审核"
+    }else if(s == 2) {
+      return "审核通过"
+    }else if(s == 3) {
+      return "审核失败"
+    }
+  }
+  module.exports.audit = audit
+
+</wxs>

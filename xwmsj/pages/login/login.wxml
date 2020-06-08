@@ -1,0 +1,24 @@
+<!--pages/login/login.wxml-->
+<view class="login">
+  <image src="/assets/drawable/ic_logo.png" />
+  <form bindsubmit="_submit">
+    <view class="telephone">
+      <label>
+        <image src="/assets/drawable/ic_account.png" />
+      </label>
+      <input type="number" placeholder="请输入手机号" name="tel"></input>
+    </view>
+    <view class="password">
+      <label>
+        <image src="/assets/drawable/ic_password.png" />
+      </label>
+      <input password placeholder="请输入密码" name="pas"></input>
+    </view>
+    <button form-type="submit">登录</button>
+    <view class="footer">
+      <text bindtap="_reset">忘记密码?</text>
+      <text bindtap="_enroll">注册账号</text>
+    </view>
+  </form>
+  <view class="bottom">登录/注册代表您已阅读并同意<text>用户协议</text>和<text>隐私政策</text></view>
+</view>

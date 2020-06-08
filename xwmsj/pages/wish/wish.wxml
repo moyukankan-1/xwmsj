@@ -1,0 +1,5 @@
+<!--pages/wish/wish.wxml-->
+<view class="wish">
+  <activelist title="{{title}}" list="{{list}}" wish="{{wish}}" name="{{opb}}"/>
+  <image src="/assets/drawable/ic_wish_1.png" class="release" bindtap="_release"></image>
+</view>

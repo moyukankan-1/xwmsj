@@ -1,0 +1,31 @@
+<!--pages/screenDetails/screenDetails.wxml-->
+<view class="screen-details">
+  <view class="active-state" hidden="{{wish == 321 || wish == 123 || wish == 456}}">
+    <view class="title">活动状态</view>
+    <text wx:for="{{activeList}}" wx:key="id" class="type-text {{index == activeIdx?'active':''}}" bindtap="_activeCut" id="{{index}}">{{item.name}}</text>
+  </view>
+  <view class="trademark" hidden="{{wish != 123}}">
+    <view class="title">品牌</view>
+    <text wx:for="{{trademarkList}}" wx:key="id" class="type-text {{index == trademarkIdx?'active':''}}" bindtap="_trademarkCut" id="{{index}}">{{item.name}}</text>
+  </view>
+  <view class="adress">
+    <view class="title">地区</view>
+    <text class="type-text {{101 == adressIdx?'active':''}}" bindtap="_adressCut" id="101">全部</text>
+    <text wx:for="{{areaList}}" wx:key="id" class="type-text {{index == adressIdx?'active':''}}" bindtap="_adressCut" id="{{index}}">{{item.areaName}}</text>
+  </view>
+  <view class="claim" hidden="{{wish != 321 || wish == 123}}">
+    <view class="title">认领状态</view>
+    <text wx:for="{{claim}}" wx:key="id" class="type-text {{index == claimIdx?'active':''}}" bindtap="_claimCut" id="{{index}}">{{item.name}}</text>
+  </view>
+  <view class="service-type" hidden="{{wish == 321}}">
+    <view class="title">服务类型</view>
+    <text class="type-text {{101 == typeIdx?'active':''}}" bindtap="_typeCut" id="101">全部</text>
+    <text wx:for="{{serviceTypeList}}" wx:key="id" class="type-text {{index == typeIdx?'active':''}}" bindtap="_typeCut" id="{{index}}">{{item.typeName}}</text>
+  </view>
+  <view class="service-object" hidden="{{wish == 321 || wish == 456}}">
+    <view class="title">服务对象</view>
+    <text class="type-text {{101 == objectIdx?'active':''}}" bindtap="_objectCut" id="101">全部</text>
+    <text wx:for="{{serviceObjectList}}" wx:key="id" class="type-text {{index == objectIdx?'active':''}}" bindtap="_objectCut" id="{{index}}">{{item.objectName}}</text>
+  </view>
+  <view class="confirm" bindtap="_confirm">确定</view>
+</view>

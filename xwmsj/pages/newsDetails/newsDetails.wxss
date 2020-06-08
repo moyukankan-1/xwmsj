@@ -1,0 +1,19 @@
+/* pages/newsDetails/newsDetails.wxss */
+.news-details {
+  padding: 20rpx;
+}
+.news-details text:nth-child(1) {
+  display: block;
+  font-weight: 700;
+  padding-bottom: 20rpx;
+}
+.news-details text:nth-child(2),.news-details text:nth-child(3) {
+  display: inline-block;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+  color: #666;
+}
+.news-details text:nth-child(4) {
+  display: block;
+  margin-top: 30rpx;
+}

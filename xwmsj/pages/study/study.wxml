@@ -1,0 +1,4 @@
+<!--pages/study/study.wxml-->
+<view class="study">
+  <articleitem id="cc" items="{{articles}}" lists="{{articleItems}}" typeitem="{{type}}" scrollY="{{scrollY}}"/>
+</view>

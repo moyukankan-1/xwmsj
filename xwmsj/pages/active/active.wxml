@@ -1,0 +1,4 @@
+<!--pages/active/active.wxml-->
+<view class="active">
+  <activelist list="{{list}}" name="{{name}}" wish="{{wish}}" title="全部地区" iid="123"/>
+</view>

@@ -1,0 +1,15 @@
+/* pages/wish/wish.wxss */
+.wish-top {
+  padding: 20rpx;
+  border-bottom: 2rpx solid rgb(230,230,230);
+}
+.wish {
+  position: relative;
+}
+.wish .release {
+  position: absolute;
+  bottom: 300rpx;
+  right: 20rpx;
+  width: 100rpx;
+  height: 100rpx;
+}

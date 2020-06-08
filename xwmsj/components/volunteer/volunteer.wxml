@@ -1,0 +1,9 @@
+<!--components/volunteer/volunteer.wxml-->
+<view class="volunteer">
+  <view wx:for="{{volList}}" wx:key="id" style="border-bottom: {{volList.length==1?'none;':'2rpx solid rgb(230,230,230)'}}">
+    <image src="https://www.jnxsdwmsj.com{{item.headImage}}" />
+    <text class="name">{{item.name}}</text>
+    <text hidden="{{d}}">服务时长: {{item.serviceTime}}小时</text>
+  </view>
+  <view hidden="{{volList.length>0?'true':''}}" style="text-align: center;color: #666;">暂无志愿者报名</view>
+</view>

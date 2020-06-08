@@ -1,0 +1,46 @@
+/* pages/apply/apply.wxss */
+.apply {
+  font-size: 30rpx;
+  padding: 30rpx;
+}
+.apply form view {
+  display: flex;
+  border-bottom: 2rpx solid rgb(230,230,230);
+  padding-bottom: 20rpx;
+  margin-bottom: 40rpx;
+}
+.apply view {
+  position: relative
+}
+.apply view label {
+  width: 180rpx;
+}
+.apply view radio {
+  margin-right: 50rpx;
+}
+.apply view picker {
+  color: #666;
+}
+.apply view text {
+  position: absolute;
+  left: 180rpx;
+  right: 0;
+  background: #fff;
+  z-index: 999;
+  color: black;
+}
+.text1 {
+  position: absolute;
+  left: 180rpx;
+  background: #fff;
+  z-index: 999;
+  color: black;
+}
+.text2 {
+  position: absolute;
+  left: 280rpx;
+  background: #fff;
+  z-index: 999;
+  color: black;
+}
+

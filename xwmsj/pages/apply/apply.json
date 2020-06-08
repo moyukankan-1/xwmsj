@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "pop": "/components/pop/pop"
+  },
+  "navigationBarBackgroundColor": "#DC143C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "申请志愿者"
+}

@@ -1,0 +1,94 @@
+<!--components/activeList/activeList.wxml-->
+<view class="active-list">
+  <view class="list-top">
+    <screen class="list-screen" name="{{name}}" bind:compontpass="compontpass" title="{{title}}" wish="{{wish}}"/>
+  </view>
+  <scroll-view scroll-y bindscrolltolower="_scroll" style="height: 100%">
+    <view wx:for="{{list}}" wx:key="id" class="list-view" id="{{index}}" bindtap="_itemTap">
+      <block wx:if="{{wish == 213}}">
+        <text class="text1">{{item.name}}</text>
+        <text>{{item.senderName}}</text>
+        <text>招募人数:{{item.enrollNum}}/{{item.needNum}}</text>
+        <text>报名时间:{{m1.format(item.enrollStartDate)}}-{{m1.format(item.enrollEndDate)}}</text>
+        <text>活动时间:{{m1.format(item.activityStartDate)}}-{{m1.format(item.activityEndDate)}}</text>
+        <text>活动地点:{{item.address}}</text>
+        <view class="success {{item.state == 3?'go':''}}">{{m1.qh(item.state)}}</view>
+      </block>
+      <block wx:if="{{wish == 321}}">
+        <view class="is">
+          <text>{{item.title}}</text>
+          <text>{{item.area}}</text>
+          <text>0{{m1.formats(item.sendTime)}}</text>
+          <text style="background: {{item.claimState == 2?'rgb(230,230,230)':''}}">{{m1.hq(item.claimState)}}</text>
+        </view>
+      </block>
+      <block wx:if="{{wish == 123}}">
+        <view class="ks">
+          <view>
+            <text>{{item.title}}</text>
+            <text class="{{item.brand == 1?'brand':''}}">{{m1.pp(item.brand)}}</text>
+          </view>
+          <text>{{item.senderName}}</text>
+          <text>可预约次数: {{item.surplusNum}}</text>
+          <text>服务类型: {{item.serviceType}}</text>
+          <text>服务对象: {{item.serviceObject}}</text>
+        </view>
+      </block>
+      <block wx:if="{{wish == 456}}">
+        <view class="ds">
+          <image src="https://www.jnxsdwmsj.com{{item.logo}}"></image>
+          <text class="title">{{item.name}}</text>
+          <text class="area">所在地区: <text>{{item.area}}</text></text>
+          <text class="time">服务时长: <text>{{item.serviceTime}}小时</text></text>
+        </view>
+      </block>
+    </view>
+    <view class="loading">
+      <image src="/assets/drawable/1.jpg" hidden="{{hiddenImg}}" />
+      <text>{{load}}</text>  
+    </view>
+  </scroll-view>
+</view>
+
+<wxs module="m1">
+  function format(ts) {
+    var d = getDate(ts*1000)
+    return [d.getMonth()+1, d.getDate()].join('/')
+  }
+  module.exports.format = format
+
+  function formats(s) {
+    var d = getDate(s*1000)
+    return [d.getMonth()+1,d.getDate()].join('/') + ' ' + [d.getMinutes(),d.getSeconds()].join(':')
+  }
+  module.exports.formats = formats
+
+  function qh(s) {
+    if(s == 1) {
+     return "未开始"
+    }else if(s == 2) {
+      return "招募中"
+    }else if(s == 3) {
+      return "进行中"
+    }else if(s == 4) {
+      return "已完成"
+    }
+  }
+  module.exports.qh = qh
+
+  function hq(s) {
+    if(s == 1) {
+     return "待认领"
+    }else if(s == 2) {
+      return "已认领"
+    }
+  }
+  module.exports.hq = hq
+
+  function pp(s) {
+    if(s == 1) {
+     return "品牌"
+    }
+  }
+  module.exports.pp = pp
+</wxs>

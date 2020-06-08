@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "activelist": "/components/activeList/activeList"
+  },
+  "navigationBarBackgroundColor": "#DC143C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "查询"
+}

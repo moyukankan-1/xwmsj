@@ -1,0 +1,6 @@
+<!--pages/volunteer/volunteer.wxml-->
+<view class="volunteer">
+  <view>
+    <volunteer volList="{{volList}}" d="{{d}}"/>
+  </view>
+</view>

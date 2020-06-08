@@ -1,0 +1,190 @@
+<!--pages/activeDetails/activeDetails.wxml-->
+<view class="active-details">
+  <view hidden="{{d}}">
+    <view hidden="{{k == 321}}">
+      <view class="details-top">
+        <text>{{activityList.name}}</text>
+        <text>所在地区: <text>{{activityList.area}}</text></text>
+        <text>招募人数: <text>{{activityList.enrollNum}}/{{activityList.needNum}}</text></text>
+      </view>
+      <view class="details-content">
+        <text>服务类型: {{activityList.serviceType}}</text>
+        <text>服务对象: {{activityList.serviceObject}}</text>
+        <text>公开范围: {{m1.hq(activityList.recruitmentScope)}}</text>
+        <text>招募时间: {{m1.formats(activityList.enrollStartDate)}} 至 {{m1.formats(activityList.enrollEndDate)}}</text>
+        <text>活动时间: {{m1.formats(activityList.activityStartDate)}} 至 {{m1.formats(activityList.activityEndDate)}}</text>
+        <text>服务时长: {{activityList.serviceTime}}小时</text>
+        <text>签到方式: {{m1.qh(activityList.checkInMode)}}</text>
+        <text>联系人: {{activityList.contactsName}}</text>
+        <text>联系电话: {{activityList.contactNumber}}</text>
+        <text>活动地点: {{activityList.address}}</text>
+        <map longitude="{{activityList.jingdu}}" latitude="{{activityList.weidu}}" markers polyline></map>
+      </view>
+      <view class="details-a">
+        <text>活动介绍: <text>{{activityList.introduce}}</text></text>
+        <text class="recruit">招募条件: <text>{{activityList.requirement}}</text></text>
+      </view>
+      <view class="details-b">
+        <text class="team">发起团队</text>
+        <image src="https://www.jnxsdwmsj.com{{activityList.sender.logo}}"></image>
+        <text>{{activityList.sender.name}}</text>
+        <text>所在地区: <text style="color: red;">{{activityList.sender.area}}</text></text>
+      </view>
+      <view class="details-c">
+        <text>活动风采:</text>
+        <image src="https://www.jnxsdwmsj.com{{activityList.images}}"></image>
+        <text class="summary">活动总结: <text>{{activityList.summary}}</text></text>
+      </view>
+      <view class="details-d">
+        <text>报名志愿者</text>
+        <text class="more" bindtap="_more">查看更多></text>
+        <volunteer volList="{{volList}}"/> 
+      </view>
+    </view>
+    <view hidden="{{k == 213}}">
+      <view class="details-top">
+        <text>{{activityList.title}}</text>
+        <text>发布时间: <text>{{m1.formats(activityList.sendTime)}}</text></text>
+      </view>
+      <view class="details-content">
+        <text>联系人: {{activityList.contactsName}}</text>
+        <text>联系电话: {{activityList.contactNumber}}</text>
+        <text>联系地址: {{m1.hq(activityList.contactAddress)}}</text>
+      </view>
+      <view class="details-a">
+        <text>心愿描述: <text>{{activityList.content}}</text></text>
+      </view>
+      <view class="details-b">
+        <text class="team">认领团队</text>
+        <image src="https://www.jnxsdwmsj.com{{activityList.claimTeam.logo}}"></image>
+        <text>{{activityList.claimTeam.name}}</text>
+        <text>认领时间: <text style="color: red;">{{m1.formats(activityList.claimTime)}}</text></text>
+      </view>
+      <text class="state" style="background: {{activityList.claimState == 1?'red':''}}">{{m1.mess(activityList.claimState)}}</text>
+    </view>
+  </view>
+  <view hidden="{{!d}}">
+    <view hidden="{{k == 456}}">
+      <view class="details-top">
+        <text>{{activityList.title}}</text>
+        <text>所在地区: <text>{{activityList.area}}</text></text>
+        <text>可预约次数: <text>{{activityList.surplusNum}}</text></text>
+      </view>
+      <view class="details-content">
+          <text>品牌服务: {{activityList.brand}}</text>
+          <text>服务类型: {{activityList.serviceType}}</text>
+          <text>服务对象: {{activityList.serviceObject}}</text>
+          <text>预约次数: {{activityList.totalNum}}</text>
+          <text>服务时间: {{m1.formats(activityList.sendTime)}} 至 {{m1.formats(activityList.overTime)}}</text>
+          <text>联系人: {{activityList.contactsName}}小时</text>
+          <text>联系电话: {{activityList.contactNumber}}</text>
+      </view>
+      <view class="details-b">
+        <text class="team">发起团队</text>
+        <image src="https://www.jnxsdwmsj.com{{activityList.sender.logo}}"></image>
+        <text>{{activityList.sender.name}}</text>
+        <text style="font-size: 24rpx; display: inline-block; margin-right: 20rpx; color:#666;">所在地区: <text style="color: red;">{{activityList.sender.area}}</text></text>
+        <text>服务时长:<text style="color: red">{{activityList.sender.serviceTime}}小时</text></text>
+      </view>
+      <view class="details-d">
+        <text>点单用户</text>
+        <text class="more" bindtap="_more">查看更多></text>
+        <volunteer volList="{{volList}}" d="{{d}}"/> 
+      </view>
+    </view>
+    <view hidden="{{k == 123}}" class="team">
+      <view class="details-top">
+        <image src="https://www.jnxsdwmsj.com{{activityList.logo}}" />
+        <text class="top-a">{{activityList.name}}</text>
+        <text class="top-b">所在地区: <text style="color: red;">{{activityList.area}}</text></text>
+        <text class="top-c">服务时长: <text style="color: red;">{{activityList.serviceTime}}小时</text></text>
+        <text class="join" bindtap="_join">我要加入</text>
+      </view>
+      <view class="details-content">
+          <text>团队地址: {{activityList.address}}</text>
+          <text>团队类型: {{activityList.teamType}}</text>
+          <text>成立时间: {{m1.format(activityList.createTime)}}</text>
+          <text>拉靠团队: {{m1.ka(activityList.superior.name)}}</text>
+          <text>服务类型: {{activityList.serviceTypeList[0].typeName}}</text>
+          <text>成员数量: {{activityList.memberNum}}</text>
+          <text>活动数量: {{activityList.activityNum}}</text>
+          <text>联系人: {{activityList.contactsName}}</text>
+          <text>联系电话: {{activityList.contactNumber}}</text>
+      </view>
+      <view class="details-a">
+        <text>团队简介:</text>
+        <text style="color:black">{{activityList.introduction}}</text>
+      </view>
+      <view class="details-b">
+        <text class="team">活动计划</text>
+        <text>{{m1.plan(activityList.activityPlan)}}</text>
+      </view>
+      <view class="details-d">
+        <text>团队成员</text>
+        <text class="more" bindtap="_more">查看更多></text>
+        <volunteer volList="{{volList}}"/> 
+      </view>
+      <view class="details-d">
+        <text>团队活动</text>
+        <text class="more" bindtap="_morez">查看更多></text>
+        <volunteer teamList="{{teamList}}" />
+      </view>
+    </view>
+  </view>
+</view>
+
+<wxs module="m1">
+    function formats(s) {
+      var d = getDate(s*1000)
+      return [d.getFullYear(), d.getMonth()+1, d.getDate()].join('-') + ' ' + [d.getHours(),d.getMinutes()].join(':')
+    }
+  module.exports.formats = formats
+
+  function format(s) {
+      var d = getDate(s*1000)
+      return [d.getFullYear(), d.getMonth()+1, d.getDate()].join('-')
+    }
+  module.exports.format = format
+
+  function qh(s) {
+    if(s == 1) {
+     return "打卡"
+    }else if(s == 2) {
+      return "报告"
+    }
+  }
+  module.exports.qh = qh
+
+  function hq(s) {
+    if(s == 1) {
+     return "团队内"
+    }else if(s == 2) {
+      return "所有人"
+    }
+  }
+  module.exports.hq = hq
+
+
+  function mess(s) {
+    if(s == 1) {
+     return "待认领"
+    }else if(s == 2) {
+      return "已认领"
+    }
+  }
+  module.exports.mess = mess
+
+  function plan(s) {
+    if(s == null) {
+     return " "
+    }
+  }
+  module.exports.plan = plan
+
+  function ka(s) {
+    if(s == undefined) {
+     return "无"
+    }
+  }
+  module.exports.ka = ka
+</wxs>

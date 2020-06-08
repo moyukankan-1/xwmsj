@@ -1,0 +1,30 @@
+<!--pages/practice/practice.wxml-->
+<view class="practice">
+  <view class="practice-title">
+    <text wx:for="{{title}}" wx:key="id" id="{{index}}" class="{{index == idx?'active':''}}" bindtap="_tap">{{item.name}}</text>
+  </view>
+  <view class="practive-content">
+    <view wx:for="{{list}}" wx:key="id" bindtap="_practive" id="{{index}}">
+      <view class="content-img">
+        <image src="https://www.jnxsdwmsj.com{{item.positionImage}}" style="height: 140rpx; width: 160rpx; border-radius: 10rpx;"></image>
+      </view>
+      <view class="content-text">
+        <text>{{item.positionName}}</text>
+        <text>电话:{{item.positionPhone}}</text>
+        <text>地址:{{item.positionAddress}}</text>
+        <image src="/assets/drawable/ic_vr.png" style="display: {{item.vrurl == ''?'none':'block'}}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<wxs module="m1">
+  function vr(s) {
+    if(s != "") {
+      return "VR"
+    }else {
+      return 
+    }
+  }
+  module.exports.vr = vr
+</wxs>

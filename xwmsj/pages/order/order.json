@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "activelist": "/components/activeList/activeList"
+  }
+}

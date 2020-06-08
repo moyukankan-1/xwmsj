@@ -1,0 +1,4 @@
+/* pages/volunteer/volunteer.wxss */
+.volunteer {
+  padding: 20rpx;
+}

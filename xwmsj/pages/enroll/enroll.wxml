@@ -1,0 +1,21 @@
+<!--pages/enroll/enroll.wxml-->
+<view class="enroll">
+  <form bindsubmit="_submittap">
+    <view wx:for="{{list}}" wx:key="id" class="enroll_inp">
+      <label>{{item.name}}</label>
+      <input type="text" id="{{item.id}}" placeholder="{{item.plac}}" bindinput="getValue" name="{{item.uname}}"></input>
+      <text hidden="{{item.yzm}}" bindtap="_code" class="{{isActive? 'active':''}}">{{codeTest}}</text>
+    </view>
+    <view class="pas">
+      <label>密码</label>
+      <input id="5" password placeholder="请输入密码" bindinput="getValue" name="mm"></input>
+    </view>
+    <view class="pas">
+      <label>确认密码</label>
+      <input id="6" password placeholder="请再次输入密码" bindinput="getValue" name="qr"></input>
+    </view>
+    <button form-type="submit" class="btn" bindtap="_enroll">注册</button>
+  </form>
+  
+  <view class="bottom">登录/注册代表您已阅读并同意<text>用户协议</text>和<text>隐私政策</text></view>
+</view>

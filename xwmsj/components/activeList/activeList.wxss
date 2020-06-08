@@ -1,0 +1,147 @@
+/* components/activeList/activeList.wxss */
+.list-top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 20rpx;
+  border-bottom: 2rpx solid rgb(230,230,230);
+  z-index: 999;
+  background: #fff;
+}
+.list-screen {
+  margin-top: 6rpx;
+}
+.list-view {
+  position: relative;
+  top: 100rpx;
+  border-bottom: 2rpx solid rgb(230,230,230);
+  padding: 20rpx;
+}
+.list-view .text1 {
+  display: block;
+  color: black;
+  font-size: 28rpx;
+  margin-right: 0;
+  width: 80%;
+  white-space:normal;
+}
+.list-view text {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #666;
+  width: 50%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap
+}
+
+.success {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  color: #fff;
+  font-size: 24rpx;
+  width: 100rpx;
+  height: 40rpx;
+  background: rgb(230,230,230);
+  text-align: center;
+  line-height: 40rpx;
+  border-radius: 20rpx;
+}
+.go {
+  background: green;
+}
+.loading {
+  position: relative;
+  top: 100rpx;
+  display: flex;
+  height: 80rpx;
+  justify-content: center;
+}
+.loading image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.loading text {
+  display: block;
+  margin-top: 20rpx;
+}
+.is {
+  position: relative;
+}
+.is text {
+  display: inline-block;
+  margin-right: 20rpx;
+  width: auto;
+}
+.is text:first-child {
+  display: block;
+  width: 100%;
+  font-size: 28rpx;
+  color: black;
+  margin-bottom: 15rpx;
+}
+.is text:last-child {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  background: red;
+  padding: 5rpx 10rpx;
+  border-radius: 25rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+.ks text:first-child {
+  display: inline-block;
+  color: black;
+  font-size: 28rpx;
+  width: auto;
+}
+.ks view {
+  margin-bottom: 20rpx;
+}
+.ks .brand {
+  display: inline;
+  padding: 0 5rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+  background: red;
+  margin-left: 10rpx;
+}
+.ds {
+  position: relative
+}
+.ds image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.ds .title {
+  position: absolute;
+  left: 160rpx;
+  top: 10rpx;
+  font-size: 28rpx;
+  color: black;
+}
+.ds .area {
+  position: absolute;
+  left: 160rpx;
+  top: 70rpx;
+}
+.ds .area text {
+  position: absolute;
+  color: black;
+  margin-left: 15rpx;
+}
+.ds .time {
+  position: absolute;
+  left: 400rpx;
+  top: 70rpx;
+}
+.ds .time text {
+  position: absolute;
+  color: black;
+  margin-left: 15rpx;
+}

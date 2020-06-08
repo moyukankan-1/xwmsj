@@ -1,0 +1,68 @@
+/* pages/modify/modify.wxss */
+.modify {
+  background: rgb(240,240,240);
+}
+.modify-head,.modify-s view {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 2rpx solid rgb(230,230,230);
+  background: #fff;
+}
+.modify-s view:last-child {
+  padding: 0;
+}
+.modify-head {
+  position: relative;
+}
+.modify-head text:last-child {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}
+.modify-s view {
+  position: relative;
+}
+.modify-s view .iconfont {
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}
+.modify-head image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.modify-head text {
+  display: inline-block;
+  margin-left: 40rpx;
+  margin-top: 40rpx;
+  color: #666;
+}
+.modify-s view text:first-child{
+  display: inline-block;
+  width: 160rpx;
+}
+.modify-s .modify-ser view {
+  display: flex;
+  flex-flow: wrap;
+  border-bottom: 0;
+  width: 560rpx;
+  margin-left: 160rpx;
+  padding: 0;
+}
+.modify-s .modify-ser view text {
+  width: auto;
+  margin-right: 10rpx;
+}
+.modify-s .modify-ser > text:first-child {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pas {
+  text-align: center;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+}
+

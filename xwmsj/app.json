@@ -1,0 +1,84 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/enroll/enroll",
+    "pages/message/message",
+    "pages/active/active",
+    "pages/study/study",
+    "pages/mine/mine",
+    "pages/articleDetails/articleDetails",
+    "pages/counties/counties",
+    "pages/countiesItem/countiesItem",
+    "pages/screenDetails/screenDetails",
+    "pages/activeDetails/activeDetails",
+    "pages/volunteer/volunteer",
+    "pages/wish/wish",
+    "pages/out/out",
+    "pages/order/order",
+    "pages/rankList/rankList",
+    "pages/komsta/komsta",
+    "pages/apply/apply",
+    "pages/applyArea/applyArea",
+    "pages/modify/modify",
+    "pages/updataPas/updataPas",
+    "pages/reset/reset",
+    "pages/news/news",
+    "pages/newsDetails/newsDetails",
+    "pages/Integral/Integral",
+    "pages/practice/practice",
+    "pages/practiveDetails/practiveDetails",
+    "pages/mapVr/mapVr",
+    "pages/feedback/feedback",
+    "pages/mineOrder/mineOrder",
+    "pages/myTeam/myTeam",
+    "pages/mineWish/mineWish",
+    "pages/releaseWish/releaseWish"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#DC143C",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/drawable/ic_tab_home_normal.png",
+        "selectedIconPath": "assets/drawable/ic_tab_home_select.png"
+      },
+      {
+        "pagePath": "pages/active/active",
+        "text": "活动",
+        "iconPath": "assets/drawable/ic_tab_active_normal.png",
+        "selectedIconPath": "assets/drawable/ic_tab_active_select.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "活动资讯",
+        "iconPath": "assets/drawable/ic_tab_news_normal.png",
+        "selectedIconPath": "assets/drawable/ic_tab_news_select.png"
+      },
+      {
+        "pagePath": "pages/study/study",
+        "text": "学习园地",
+        "iconPath": "assets/drawable/ic_tab_study_normal.png",
+        "selectedIconPath": "assets/drawable/ic_tab_study_select.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "assets/drawable/ic_tab_my_normal.png",
+        "selectedIconPath": "assets/drawable/ic_tab_my_select.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

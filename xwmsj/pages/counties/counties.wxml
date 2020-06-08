@@ -1,0 +1,6 @@
+<!--pages/counties/counties.wxml-->
+<view class="counties">
+  <view wx:for="{{list}}" wx:key="id" id="{{index}}" bindtap="_countiesList">
+    <text>{{item.areaName}}</text>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<!--pages/news/news.wxml-->
+<view class="news">
+  <view class="news-title">
+    <text wx:for="{{title}}" wx:key="id" id="{{index}}" class="{{index == idx?'active':''}}" bindtap="_active">{{item.name}}</text>
+  </view>
+  <view class="news-content">
+    <view wx:for="{{list}}" wx:key="id" id="{{index}}" bindtap="_news">
+      <text>{{item.title}}</text>
+      <text>{{item.sender}}</text>
+      <text>{{m1.formats(item.sendTime)}}</text>
+      <text class="{{item.state == 1?'unread':''}}"></text>
+    </view>
+  </view>
+  <view class="integral-bottom" style="display: {{none}}">
+    <image src="/assets/drawable/ic_no_data.png" />
+    <text>暂无数据</text>
+  </view>
+</view>
+<wxs module="m1">
+  function formats(s) {
+    var d = getDate(s*1000)
+    return [d.getMonth()+1,d.getDate()].join('/') + ' ' + [d.getMinutes(),d.getSeconds()].join(':')
+  }
+  module.exports.formats = formats
+</wxs>

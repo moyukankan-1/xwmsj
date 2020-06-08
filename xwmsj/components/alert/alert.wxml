@@ -1,0 +1,14 @@
+<!--components/pop/pop.wxml-->
+<view class="alert" hidden="{{!showAlert}}">
+  <view class="alert-mask"></view>
+  <view class="alert-content">
+    <view class="title">{{title}}</view>
+    <view class="inputs">
+      <textarea placeholder="{{plaTitle}}" value="{{value}}" bindinput="_cons"></textarea>
+    </view>
+    <view class="btn-row">
+      <view class="cancel" bindtap='_cancel'>取消</view>
+      <view class="confirm" bindtap="_confirm">确定</view>
+    </view>
+  </view> 
+</view> 

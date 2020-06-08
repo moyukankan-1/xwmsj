@@ -1,0 +1,28 @@
+/* components/volunteer/volunteer.wxss */
+.volunteer {
+  border-top: 2rpx solid rgb(230,230,230);
+  background: #fff;
+}
+.volunteer view {
+  position: relative;
+  left: 0;
+  right: 0;
+  padding: 20rpx 0;
+}
+.volunteer image {
+  width: 80rpx;
+  height: 80rpx;
+  background: #666;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.volunteer .name {
+  position: absolute;
+  top: 40rpx;
+  left: 100rpx;
+}
+.volunteer text:last-child {
+  position: absolute;
+  top: 40rpx;
+  right: 20rpx;
+}

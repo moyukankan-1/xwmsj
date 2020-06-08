@@ -1,0 +1,34 @@
+<!--pages/Integral/Integral.wxml-->
+<view class="integral">
+  <view class="integral-title">
+    <view><text bindtap="_time" id="0" class="{{idx == 0?'active':''}}">时长</text></view>
+    <view><text bindtap="_jifen" id="1" class="{{idx == 1?'active':''}}">积分</text></view>
+  </view>
+  <view class="integral-content">
+    <view wx:for="{{list}}" wx:key="id">
+      <text>{{m1.formats(item.addtime)}}</text>
+      <text>{{item.content}}</text>
+      <text>{{m1.jj(item.type)}}{{item.score}}</text>
+    </view>
+  </view>
+  <view class="integral-bottom" style="display: {{none}}">
+    <image src="/assets/drawable/ic_no_data.png" />
+    <text>暂无数据</text>
+  </view>
+</view>
+<wxs module="m1">
+  function formats(s) {
+    var d = getDate(s*1000)
+    return [d.getFullYear(),d.getMonth()+1,d.getDate()].join('-') + ' ' + [d.getHours(),d.getMinutes(),d.getSeconds()].join(':')
+  }
+  module.exports.formats = formats
+
+  function jj(s) {
+    if(s == 1) {
+      return "+"
+    }else {
+      return "-"
+    }
+  }
+  module.exports.jj = jj
+</wxs>

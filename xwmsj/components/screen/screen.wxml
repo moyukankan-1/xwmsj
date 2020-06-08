@@ -1,0 +1,8 @@
+<!--components/screen/screen.wxml-->
+<view class="screen">
+  <scroll-view class="scroll">
+    <text style="display:{{name.length == 0?'inline-block':'none'}}">{{title}}</text>
+    <text wx:for="{{name}}" wx:key="id" bindtap="_close" id="{{index}}">{{item.name}} <text>X</text></text>
+  </scroll-view>  
+  <image src="../../assets/drawable/screen.jpg" bindtap="_screen"/>
+</view>

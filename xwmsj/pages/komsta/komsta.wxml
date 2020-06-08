@@ -1,0 +1,4 @@
+<!--pages/komsta/komsta.wxml-->
+<view class="komsta">
+  <activelist title="{{title}}" list="{{list}}" wish="{{wish}}" name="{{opd}}"/>
+</view>

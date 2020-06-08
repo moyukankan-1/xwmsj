@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "volunteer": "/components/volunteer/volunteer"
+  },
+  "navigationBarBackgroundColor": "#DC143C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "活动志愿者"
+}

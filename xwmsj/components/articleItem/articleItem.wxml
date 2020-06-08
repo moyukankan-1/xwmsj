@@ -1,0 +1,41 @@
+<!--components/articleItem/articleItem.wxml-->
+<view class="article-item">
+  <scroll-view scroll-x class="{{items.length > 4?'jak':''}}">
+    <articlelist id="sp_sb" items="{{items}}" bind:selectChange="_handlerSelect" scrollY="{{scrollY}}"/>
+  </scroll-view>
+  <swiper class="article-swiper {{scrollY?'sa':''}}" bindchange="_handlerChange" current="{{current}}">
+    <swiper-item wx:for="{{items}}" wx:key="id">
+      <scroll-view class="scrollitem" scroll-top="{{scrollTop}}" bindscrolltolower="_scroll" scroll-y="{{scrollY}}" style="height: 100%">
+        <!-- 子栏目 -->
+        <scroll-view scroll-x="{{scrollX}}" class="{{scrollX?'jzk':''}}" hidden="{{!scrollX}}">
+          <view>
+            <text bindtap="_sonTap" id="101" class="{{101 == currentIdx? 'hs':''}}">全部</text>
+            <text wx:for="{{kc}}" wx:key="id" id="{{index}}" bindtap="_sonTap" class="{{index == currentIdx? 'hs':''}}">{{item.columnName}}</text>
+          </view>
+        </scroll-view>
+        <!-- 组件显示首页文章列表 -->
+        <view class="swiper-view {{scrollY?'abc':''}}" wx:for="{{lists}}" wx:key="id" id="{{index}}" bindtap="_details">
+          <view>
+            <text>{{item.title}}</text>
+            <text>{{item.sender}}</text>
+            <text>{{m1.format(item.date)}}</text>
+          </view>
+          <image src="https://www.jnxsdwmsj.com{{item.image}}" hidden="{{item.image != ''?false:true}}"/>
+        </view>
+        <view class="loading">
+          <image src="/assets/drawable/1.jpg" hidden="{{hiddenImg}}" />
+          <text>{{load}}</text>  
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 时间戳转换成时间格式 -->
+<wxs module="m1">
+  function format(ts) {
+    var d = getDate(ts*1000)
+    return [d.getFullYear(), d.getMonth()+1, d.getDate()].join('-')
+  }
+  module.exports.format = format
+</wxs>

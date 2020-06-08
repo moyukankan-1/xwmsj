@@ -1,0 +1,5 @@
+<!--pages/order/order.wxml-->
+<view class="order">
+  <activelist title="{{title}}" list="{{list}}" wish="{{wish}}" name="{{opc}}"/>
+</view>
+

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "articleitem": "/components/articleItem/articleItem"
+  },
+  "navigationBarBackgroundColor": "#DC143C",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "活动资讯"
+}

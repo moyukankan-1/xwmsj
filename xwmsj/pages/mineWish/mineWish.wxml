@@ -1,0 +1,33 @@
+<!--pages/mineWish/mineWish.wxml-->
+<view class="mine-wish">
+  <view wx:for="{{list}}" wx:key="id">
+    <text>{{item.title}}</text>
+    <text>发布时间: {{m1.formats(item.sendTime)}}</text>
+    <text style="background: {{item.checkState ==1?'orange':''}}{{item.checkState == 3?'red':''}};color: {{item.checkState ==1?'#fff':''}}{{item.checkState == 3?'#fff':''}};">{{m1.audit(item.checkState)}}</text>
+  </view>
+  <image src="/assets/drawable/ic_wish_1.png" class="fabu" bindtap="_fabu"></image>
+  <view class="integral-bottom" style="display: {{none}}; border-bottom: none;">
+    <image src="/assets/drawable/ic_no_data.png" />
+    <text>暂无数据</text>
+  </view>
+</view>
+
+<wxs module="m1">
+  function formats(s) {
+    var d = getDate(s*1000)
+    return [d.getFullYear(),d.getMonth()+1,d.getDate()].join('-') + ' ' + [d.getHours(),d.getMinutes()].join(':')
+  }
+  module.exports.formats = formats
+
+  function audit(s) {
+    if(s == 1) {
+      return "待审核"
+    }else if(s == 2) {
+      return "审核通过"
+    }else if(s == 3) {
+      return "审核失败"
+    }
+  }
+  module.exports.audit = audit
+
+</wxs>

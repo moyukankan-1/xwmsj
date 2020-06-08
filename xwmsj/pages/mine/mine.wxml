@@ -1,0 +1,33 @@
+<!--pages/mine/mine.wxml-->
+<view class="mine">
+  <view class="mine-image" bindtap="_modify">
+    <image src="https://www.jnxsdwmsj.com{{list.headImage}}"></image>
+    <text>{{list.name}}</text>
+    <view style="display: {{list.userType == 2?'block':'none'}}">
+      <text>服务时长:{{list.serviceTime}}小时</text>
+      <text>积分:{{list.score}}</text>
+    </view>
+  </view>
+  <view class="mine-content" style="display: {{list.userType == 1?'block':'none'}}">
+    <view wx:for="{{content}}" wx:key="id" bindtap="_tap" id="{{index}}">
+      <image src="/assets/drawable/{{item.msrc}}"></image>
+      <text>{{item.name}}</text>
+      <text class="iconfont icon-xiangyou"></text>
+    </view>
+  </view>
+  <view class="mine-content" style="display: {{list.userType == 2?'block':'none'}}">
+    <view wx:for="{{content2}}" wx:key="id" bindtap="_tap2" id="{{index}}">
+      <image src="/assets/drawable/{{item.msrc}}"></image>
+      <text>{{item.name}}</text>
+      <text style="display: {{index == 0?'block':'none'}}" class="unin">{{num}}</text>
+      <text class="iconfont icon-xiangyou"></text>
+    </view>
+  </view>
+  <view class="mine-content">
+    <view wx:for="{{bottom}}" wx:key="id" id="{{index}}" bindtap="_quit">
+      <image src="/assets/drawable/{{item.dsrc}}"></image>
+      <text>{{item.name}}</text>
+      <text class="iconfont icon-xiangyou"></text>
+    </view>
+  </view>
+</view>

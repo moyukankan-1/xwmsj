@@ -1,0 +1,140 @@
+<!--pages/modify/modify.wxml-->
+<view class="modify">
+  <view class="modify-head" bindtap="_modhead">
+    <image src="https://www.jnxsdwmsj.com{{list.headImage}}"></image>
+    <text>修改头像</text>
+    <text class="iconfont icon-xiangyou"></text>
+  </view>
+  <view class="modify-s">
+    <view class="modify-name">
+      <text>姓名:</text>
+      <text>{{list.name}}</text>
+    </view>
+    <view class="modify-card" bindtap="_card">
+      <text>身份证号:</text>
+      <text>{{cart.toHide(IdCard)}}</text>
+      <text class="iconfont icon-xiangyou"></text>
+    </view>
+    <view class="modify-tel">
+      <text>手机号:</text>
+      <text>{{list.mobile}}</text>
+    </view>
+    <view style="display: {{list.userType == 2?'block':'none'}}">
+      <view class="modify-vol">
+        <text>志愿者号:</text>
+        <text>{{list.volunteerCode}}</text>
+      </view>
+      <view class="modify-gender">
+        <text>性别:</text>
+        <picker mode="selector" range="{{sex}}" bindchange="_bindSex"><text>{{cart.jj(gender)}}</text></picker>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-bri">
+        <text>出生日期:</text>
+        <picker mode="date" bindchange="_brithdate"><text>{{cart.format(brithdate)}}</text></picker>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-nat">
+        <text>民族:</text>
+        <picker mode="selector" range="{{nat}}" bindchange="_bindnat"><text>{{cart.han(nationality)}}</text></picker>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-occ">
+        <text>职业:</text>
+        <picker mode="selector" range="{{occ}}" bindchange="_bindocc"><text>{{occupation}}</text></picker>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-email" bindtap="_email">
+        <text>邮箱:</text>
+        <text>{{list.email}}</text>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-pol">
+        <text>政治面貌:</text>
+        <picker mode="selector" range="{{pol}}" bindchange="_bindpol"><text>{{policitalStatus}}</text></picker>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-edu">
+        <text>文化程度:</text>
+        <picker mode="selector" range="{{edu}}" bindchange="_bindedu"><text>{{education}}</text></picker>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-org" bindtap="_unit">
+        <text>单位名称:</text>
+        <text>{{organizationName}}</text>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-xian" bindtap="_diqu">
+        <text>所在地区:</text>
+        <text>{{list.xianquname}} {{list.zhenjiename}}</text>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-add" bindtap="_pars">
+        <text>详细地址:</text>
+        <text>{{address}}</text>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-ser" bindtap="_lei">
+        <text>服务类型:</text>
+        <view>
+          <text wx:for="{{list.serviceTypeList}}" wx:key="id">{{item.typeName}}，</text>
+        </view>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-ser" bindtap="_neng">
+        <text>个人技能:</text>
+        <view>
+          <text wx:for="{{list.skillList}}" wx:key="id">{{item.skillName}},</text>
+        </view>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-time" bindtap="_time">
+        <text>服务时间:</text>
+        <text>{{serviceDuration}}</text>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+      <view class="modify-int" style="padding: 20rpx;" bindtap="_mine">
+        <text>自我介绍:</text>
+        <text>{{introduction}}</text>
+        <text class="iconfont icon-xiangyou"></text>
+      </view>
+    </view>
+  </view>
+  <view class="pas" bindtap="_updataPas">修改密码</view>
+  <alert id="alert" title="{{title}}" plaTitle="{{plaTitle}}" ty="{{ty}}" value="{{value}}"  bind:cancel="_handleCancel" bind:confirm="_handleConfirm"/>
+  <pop id="pop" title="{{poptitle}}" type="{{popty}}" bind:cancel="_handleCancelpop" bind:confirm="_handleConfirmpop"/>
+</view>
+
+<wxs module="cart">
+  var toHide = function(array) {
+    return array.substring(0, 1) + '*****************' + array.substring(17)
+  }
+  module.exports.toHide = toHide;
+
+  function format(s) {
+    var d = getDate(s*1000)
+    return [d.getFullYear(),d.getMonth()+1,d.getDate()].join('-')
+  }
+  module.exports.format = format
+
+  function jj(s) {
+    if(s == 1) {
+      return "男"
+    }else {
+      return "女"
+    }
+  }
+  module.exports.jj = jj
+
+  function han(s) {
+    if(s == 1) {
+      return "汉族"
+    }else if(s == 2) {
+      return "少数民族"
+    }else {
+      return "其他"
+    }
+  }
+
+  module.exports.han = han
+</wxs>

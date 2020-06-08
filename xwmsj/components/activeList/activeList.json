@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "screen": "/components/screen/screen"
+  }
+}

@@ -1,0 +1,178 @@
+/* pages/activeDetails/activeDetails.wxss */
+.active-details {
+  background: rgb(240,240,240);
+}
+.details-top {
+  position: relative;
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.details-top text {
+  display: inline-block;
+  font-size: 24rpx;
+  margin-right: 40rpx;
+}
+.details-top text text {
+  color: red;
+  margin-left: 10rpx;
+}
+.details-top > text:first-child {
+  display: block;
+  padding: 10rpx 0;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.join {
+  position: absolute;
+  right: -30rpx;
+  top: 20rpx;
+  background: red;
+  border-radius: 30rpx;
+  padding: 10rpx 20rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+.details-content {
+  background: #fff;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.details-content text {
+  display: block;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+}
+.details-content map {
+  width: 100%;
+}
+.details-a {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.details-a text {
+  display: block;
+  padding-bottom: 20rpx; 
+  color: #666;
+}
+.details-a > text:first-child {
+  font-size: 26rpx;
+}
+.details-a text text {
+  color: black;
+  padding: 15rpx 0;
+  border-bottom: 2rpx solid rgb(230,230,230);
+}
+.details-a .recruit {
+  padding-top: 20rpx;
+}
+.details-a .recruit text {
+  border: none;
+}
+.details-b {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.details-b image {
+  float: left;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #666;
+  margin-right: 20rpx;
+}
+.details-b text {
+  display: block;
+  font-size: 26rpx;
+  color: #666;
+}
+.details-b text:last-child {
+  display: inline-block;
+  color: #666;
+  font-size: 24rpx;
+}
+.details-b .team {
+  padding-bottom: 30rpx;
+}
+.details-c {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.details-c > text {
+  display: block;
+  padding: 20rpx 0;
+}
+.details-c image {
+  width: 400rpx;
+  height: 250rpx;
+  padding-bottom: 20rpx;
+}
+.details-d {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.details-d .more {
+  margin-left: 450rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+.details-d > text {
+  display: inline-block;
+  padding-bottom: 20rpx;
+}
+.details-d > text:first-child {
+  font-size: 26rpx;
+}
+.summary {
+  color: #666;
+  padding-top: 20rpx;
+  border-top: 2rpx solid rgb(230,230,230);
+}
+.summary text {
+  color: black;
+  margin-top: 10rpx;
+  display: block;
+}
+.state {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  padding: 10rpx 15rpx;
+  color: #fff;
+  background: rgb(230,230,230);
+  font-size: 24rpx;
+  border-radius: 25rpx;
+}
+.cool {
+  background: red;
+}
+.team .details-top {
+  position: relative;
+}
+.team .details-top image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.details-top .top-a {
+  position: absolute;
+  top: 20rpx;
+  left: 160rpx;
+  font-size: 32rpx;
+}
+.details-top .top-b {
+  position: absolute;
+  top: 80rpx;
+  left: 160rpx;
+  color: #666;
+}
+.details-top .top-c {
+  position: absolute;
+  top: 80rpx;
+  left: 400rpx;
+  color: #666;
+}

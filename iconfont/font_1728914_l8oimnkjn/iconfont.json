@@ -1,0 +1,16 @@
+{
+  "id": "1728914",
+  "name": "新文明实践",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "700817",
+      "name": "向右",
+      "font_class": "xiangyou",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+<!--pages/countiesItem/countiesItem.wxml-->
+<view class="counties-item" style="margin-top: -90rpx;">
+  <articleitem items="{{list}}" lists="{{listItem}}" scrollY="{{scrollX}}" scrollX="{{scrollX}}" kc="{{item}}" iid="123"/>
+</view>

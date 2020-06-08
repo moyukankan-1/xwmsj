@@ -1,0 +1,14 @@
+/* pages/articleDetails/articleDetails.wxss */
+.article-details {
+  padding: 40rpx;
+}
+.article-details .text1 {
+  display: block;
+  line-height: 60rpx;
+  font-weight: 700;
+}
+.article-details .text2,.text3 {
+  color: #666;
+  font-size: 24rpx;
+  margin-right: 20rpx;
+}

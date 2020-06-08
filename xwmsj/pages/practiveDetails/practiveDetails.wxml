@@ -1,0 +1,37 @@
+<!--pages/practiveDetails/practiveDetails.wxml-->
+<view class="practive-details"> 
+  <view class="details-title">
+    <view class="content-img">
+      <image src="https://www.jnxsdwmsj.com{{list.positionImage}}" style="height: 140rpx; width: 160rpx; border-radius: 10rpx;"></image>
+    </view>
+    <view class="content-text">
+      <text>{{list.positionName}}</text>
+      <text>电话:{{list.positionPhone}}</text>
+      <text>类型:{{m1.type(list.positionType)}}</text>
+    </view>  
+  </view>
+  <view class="details-content">
+    <view>
+      <text>阵地地址:</text>
+      <text>{{list.positionAddress}}</text>
+    </view>
+    <view>
+      <text>阵地简介:</text>
+      <text>{{list.content}}</text>
+    </view>
+  </view>
+  <image src="/assets/drawable/ic_vr.png" class="vr" style="display: {{none}}" bindtap="_vr"></image>
+</view>
+
+<wxs module="m1">
+  function type(s) {
+    if(s == 1 ) {
+      return "全部"
+    }else if(s == 2){
+      return "分中心"
+    }else if(s == 3) {
+      return "站点"
+    }
+  }
+  module.exports.type = type
+</wxs>

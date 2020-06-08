@@ -1,0 +1,25 @@
+/* components/articleList/articleList.wxss */
+.article-list {
+  display: flex;
+  background: #fff;
+  justify-content: space-between;
+  padding: 30rpx 40rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid rgb(230, 230,230);
+  padding-bottom: 0;
+}
+.article-list view {
+  padding-bottom: 15rpx;
+}
+.active {
+  border-bottom: 4rpx solid red;
+  color: red;
+}
+.move {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 999;
+}

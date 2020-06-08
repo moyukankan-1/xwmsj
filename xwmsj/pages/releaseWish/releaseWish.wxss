@@ -1,0 +1,42 @@
+/* pages/releaseWish/releaseWish.wxss */
+.release-wish {
+  background: rgb(230,230,230);
+}
+.release-wish .wish-title {
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+.wish-title view {
+  background: rgb(230,230,230);
+  width: 100%;
+  border-radius: 10rpx;
+  margin: 20rpx 0;
+}
+.wish-title view input {
+  padding: 10rpx;
+}
+.wish-title .feed {
+  height: 200rpx;
+}
+.wish-content {
+  background: #fff;
+  margin-bottom: 50rpx;
+  padding: 20rpx;
+}
+.wish-content > view {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.wish-content > view view {
+  flex: 1;
+  background: rgb(230,230,230);
+  border-radius: 10rpx;
+}
+.wish-content > view label {
+  width: 150rpx;
+  margin-top: 10rpx;
+}
+.wish-content > view view input {
+  padding: 10rpx;
+}

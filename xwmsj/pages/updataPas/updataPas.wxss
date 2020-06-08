@@ -1,0 +1,18 @@
+/* pages/updataPas/updataPas.wxss */
+.updata-pas {
+  padding: 30rpx;
+}
+.updata-pas view {
+  display: flex;
+  border-bottom: 2rpx solid rgb(230,230,230);
+  padding: 20rpx 0;
+}
+.updata-pas view label {
+  display: inline-block;
+  width: 180rpx;
+}
+.btn {
+  margin-top: 60rpx;
+  background: red;
+  color: #fff;
+}

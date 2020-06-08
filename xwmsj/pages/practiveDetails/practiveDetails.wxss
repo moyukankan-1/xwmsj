@@ -1,0 +1,46 @@
+/* pages/practiveDetails/practiveDetails.wxss */
+.practive-details {
+  background: rgb(230,230,230);
+}
+.details-title {
+  display: flex;
+  background: #fff;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+.content-img {
+  width: 160rpx;
+  height: 140rpx;
+}
+.content-text {
+  flex: 1;
+  margin-left: 20rpx;
+}
+.content-text text:nth-child(1) {
+  display: block;
+  padding-bottom: 10rpx;
+}
+.content-text text:nth-child(2),.content-text text:nth-child(3) {
+  display: block;
+  color: #666;
+  font-size: 24rpx;
+  padding-bottom: 20rpx;
+}
+.details-content {
+  background: #fff;
+}
+.details-content view {
+  padding: 20rpx;
+  border-bottom: 2rpx solid rgb(230,230,230);
+}
+.details-content view text:first-child {
+  display: block;
+  color: #666;
+}
+.vr {
+  position: absolute;
+  right: 20rpx;
+  bottom: 80rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
